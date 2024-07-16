@@ -1,0 +1,8 @@
+---
+- hosts: prod
+  remote_user: ubuntu
+  tasks:
+    - name: testing website
+      uri:
+        url: http://192.168.99.11
+        status_code: 200
