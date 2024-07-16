@@ -1,0 +1,44 @@
+---
+# Setup Ubuntu by adding all dependencies for this role
+- name: Check for the correct OS distributon and version
+  fail:
+    msg: The OS distribution should be Ubuntu
+  when: ansible_distribution != "Ubuntu"
+
+- name: Update the apt cache
+  apt:
+    update_cache: yes
+
+- name: Install some package and prerequisites
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - software-properties-common
+    - wget
+    - git
+    - apt-transport-https
+    - ca-certificates
+    - lvm2
+    - python3
+    - python3-pip
+
+#Install docker and docker-compose on the client
+- include_tasks: "install-docker.yml"
+
+
+- name: "Copy template index.html file to the client"
+  template:
+    src: index.html.j2
+    dest: "{{ template_dest }}"
+
+- name: Create and start an Apache container
+  docker_container:
+    name: {{ container_name}}
+    image: httpd:latest
+    state: started
+    ports:
+      - "80:80"
+    volume:
+    - "/home/{{ system_user }}/index.html:/usr/local/apache2/htdocs/index.html"
+    restart_policy: always
