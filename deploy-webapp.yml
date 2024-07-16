@@ -2,4 +2,4 @@
 - hosts: prod
   become: true
   roles:
-    - { role: ansible_role_webapp }
+    - { role: ansible_role_apache-container }
