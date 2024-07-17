@@ -39,6 +39,6 @@
     state: present
 
 - name: Install docker python package
-  pip:
-    name: docker
-    executable: pip3
+  apt:
+    name: python3-docker
+    state: present

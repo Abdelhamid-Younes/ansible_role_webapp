@@ -34,11 +34,11 @@
 
 - name: Create and start an Apache container
   docker_container:
-    name: {{ container_name}}
+    name: "{{ container_name }}"
     image: httpd:latest
     state: started
     ports:
       - "80:80"
-    volume:
+    volumes:
     - "/home/{{ system_user }}/index.html:/usr/local/apache2/htdocs/index.html"
     restart_policy: always

@@ -3,3 +3,4 @@ system_user: ubuntu
 container_name: webapp_container
 exposed_ports: "80:80"
 template_dest: /home/ubuntu/index.html
+welcome: "{{ system_user }}"
