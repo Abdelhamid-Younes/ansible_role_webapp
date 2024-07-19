@@ -4,7 +4,7 @@ This Ansible role deploys an Apache server in a Docker container on an Ubuntu sy
 
 ## Requirements
 
-- Ansible 2.9+
+- Ansible 2.16 or later
 - Ubuntu 18.04/20.04/22.04/24.04
 - Docker and Docker Compose
 
