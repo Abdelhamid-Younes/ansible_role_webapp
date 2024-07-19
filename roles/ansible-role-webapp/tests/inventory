@@ -5,4 +5,4 @@ all:
 prod:
   hosts:
     client:
-      ansible_host: 3.82.157.211
+      ansible_host: 3.83.23.62 # Replace with the actual IP address
