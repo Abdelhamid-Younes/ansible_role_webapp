@@ -9,7 +9,7 @@
   apt:
     update_cache: yes
 
-- name: Install some package and prerequisites
+- name: Install some packages and prerequisites
   apt:
     name: "{{ item }}"
     state: present
