@@ -1,6 +1,6 @@
 # Ansible Role: Apache Server Deployment
 
-This Ansible role deploys an Apache server in a Docker container on an Ubuntu system. It ensures all necessary dependencies are installed, sets up Docker and Docker Compose, and creates a simple web page served by the Apache server.
+This Ansible role deploys an Apache server in a Docker container on an Ubuntu system. It ensures that all necessary dependencies are installed, sets up Docker and Docker Compose, and creates a simple web page served by the Apache server.
 
 ## Requirements
 
