@@ -32,7 +32,7 @@ The variables required by this role are defined in `defaults/main.yml`:
 2. Create a playbook that uses this role
 ```
 ---
-- hosts: prod
+- hosts: all
   become: true
   roles:
     - ansible-role-webapp
