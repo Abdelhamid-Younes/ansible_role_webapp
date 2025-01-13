@@ -48,11 +48,18 @@ prod:
     client:
       ansible_host: *.*.*.*
       ansible_user: ubuntu
-      ansible_ssh_private_key_file: /path/to/your/private/key
+      ansible_ssh_private_key_file: ~/.ssh/*******.pem
 ```
 4. Run the playbook:
    ```
-   ansible-playbook -i inventory_file your_playbook.yml
+   ansible-playbook -i hosts.yml deploy-webapp.yml
    ``` 
+
+5. Results:
+
+- Running the playbook:
+
+![](images/CI_CD_Pipeline.png)
+
 ## Conclusion:
 This mini-project showcases an Ansible role that deploys an Apache server in a Docker container on Ubuntu. It automates the installation of dependencies, Docker setup, and Apache container configuration, simplifying web server deployment and management.
