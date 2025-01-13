@@ -59,7 +59,11 @@ prod:
 
 - Running the playbook:
 
-![](images/CI_CD_Pipeline.png)
+![](images/ansible_playbook.png)
+
+- The webapp home page:
+
+![](images/appache_server.png)
 
 ## Conclusion:
 This mini-project showcases an Ansible role that deploys an Apache server in a Docker container on Ubuntu. It automates the installation of dependencies, Docker setup, and Apache container configuration, simplifying web server deployment and management.
